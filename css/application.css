@@ -289,7 +289,7 @@ div.menu{
 		div.menu ul li{
 			
 			color: #fff;
-			font: 400 16px 'Myriad Pro Regular';
+			font: 400 16px 'Myriad Pro Regular', sans-serif;
 			list-style: none;
 			
 			position: relative;
@@ -319,7 +319,7 @@ div.menu{
 				background-color: #ffffff;
 				width: 150px;
 				text-align: center;
-				font: 400 16px 'Myriad Pro Regular';
+				font: 400 16px 'Myriad Pro Regular', sans-serif;
 				border: none;
 				
 			}
@@ -433,7 +433,7 @@ div.container{
 
 	div.block.half h2{
 		margin-top: 0px;
-		font-family: 'Myriad Pro Bold';
+		font-family: 'Myriad Pro Bold', sans-serif;
 	}
 
 	div.block p{
