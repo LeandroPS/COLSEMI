@@ -84,6 +84,27 @@ span.negrito{
 	font-weight: bold;
 }
 
+div.direita{
+	text-align: right;
+}
+
+	div.direita>p{
+		text-align: right!important;
+	}
+
+div.normas table{
+	border-collapse: collapse;
+}
+
+	div.normas table tr th{
+		text-align: center;
+	}
+	
+	div.normas table, div.normas table th, div.normas table td{
+		border: 1px solid;
+	}
+	
+
 div.header{
 	height: 400px;
 	overflow: hidden;
@@ -340,10 +361,7 @@ div.menu{
 
 				div.menu>ul li.com-submenu.expandido div a{
 					background-color: #222;
-					
 					transition: background-color 0.5s;
-					
-					
 				}
 
 				div.menu>ul li.com-submenu> div> a:after{
@@ -401,8 +419,14 @@ div.menu{
 					}
 
 					div.menu>ul>li>ul li{
-						padding: 10px 0px;
+						padding: 10px;
 					}
+
+						div.menu>ul>li>ul li a{
+							line-height: normal;
+							padding: 0px;
+							text-align: left;
+						}
 
 						div.menu>ul>li>ul li:not(:last-child){
 							border-bottom: 1px solid;
