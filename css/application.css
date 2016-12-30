@@ -261,10 +261,15 @@ div.menu{
 	display: block;
 	
 	position: relative;
+	
+	z-index: 64;
 }
 
 	div.menu span.button-menu{
 		display: none;
+		
+		width: 100%;
+    text-align: center;
 	}
 
 	div.menu.fixed-menu{
@@ -273,12 +278,12 @@ div.menu{
 		z-index: 64;
 	}
 
-	div.menu ul{
+	div.menu>ul{
 		padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: space-between;
-    max-width: 880px;
+    max-width: 900px;
     width: calc(100% - 80px);
     position: relative;
     left: 50%;
@@ -286,7 +291,7 @@ div.menu{
     /* margin-left: 10px; */
 	}
 
-		div.menu ul li{
+		div.menu>ul li{
 			
 			color: #fff;
 			font: 400 16px 'Myriad Pro Regular', sans-serif;
@@ -297,11 +302,11 @@ div.menu{
 /*			width: 125px;*/
 		}
 
-			div.menu ul li div.menu-center{
+			div.menu>ul li div.menu-center{
 				display: table; 
 			}
 
-			div.menu ul li a{
+			div.menu>ul li a{
 				line-height: 40px;
 				color: #fff;
 				text-decoration: none;
@@ -309,9 +314,11 @@ div.menu{
 				 display: table-cell; 
 				vertical-align: middle; 
 				text-align: center; 
+				
+				padding: 0px 10px;
 			}
 
-			div.menu ul li button{
+			div.menu>ul li button{
 				height: 30px;
 				line-height: 30px;
 				margin-top: 5px;
@@ -323,6 +330,80 @@ div.menu{
 				border: none;
 				
 			}
+
+				div.menu>ul li.com-submenu a{
+					background-color: transparent;
+					
+					transition: background-color 1s;
+				}
+
+				div.menu>ul li.com-submenu.expandido a{
+					background-color: #222;
+					
+					transition: background-color 0.5s;
+				}
+
+				div.menu>ul li.com-submenu a:after{
+					content: "";
+					width: 0px;
+					height: 0px;
+					display: inline-block;
+					border-top: 5px solid #fff;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: none;
+					/* border-bottom: 5px solid; */
+					/* margin-top: 20px; */
+					margin-left: 7px;
+					
+				}
+
+					div.menu>ul li.com-submenu.expandido a:after{
+						content: "";
+						width: 0px;
+						height: 0px;
+						display: inline-block;
+						border-top: none;
+						border-left: 5px solid transparent;
+						border-right: 5px solid transparent;
+						border-bottom: 5px solid #fff;
+						/* border-bottom: 5px solid; */
+						/* margin-top: 20px; */
+						margin-left: 7px;
+					}
+
+				div.menu>ul>li.com-submenu>ul{
+					position: absolute;
+					background: #222;
+					width: 170px;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: 65;
+					padding: 0px 15px;
+					
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+					
+					max-height: 0px;
+					
+					overflow-y: hidden;
+					
+					transition: max-height 0.5s;
+				}
+
+					div.menu>ul>li.com-submenu>ul.expandido{
+						max-height: 200px;
+						
+						transition: max-height 1s;
+					}
+
+					div.menu>ul>li>ul li{
+						padding: 10px 0px;
+					}
+
+						div.menu>ul>li>ul li:not(:last-child){
+							border-bottom: 1px solid;
+						}
 
 @media (max-width: 800px){
 	
@@ -345,14 +426,14 @@ div.menu{
 			transform: translateX(-50%);
 		}
 	
-		div.menu ul{
+		div.menu>ul{
 			background: #000;
 			display: block;
 			padding: 0px 20px;
 			
-			height: 0px;
+			max-height: 0px;
 			
-			transition: height 1s;
+			transition: max-height 1s;
 			
 			overflow: hidden;
 			
@@ -361,31 +442,65 @@ div.menu{
 			z-index: 65;
 		}
 	
-			div.menu ul.show{
-				height: 535px;
+			div.menu>ul.show{
+				max-height: 535px;
 				
-				transition: height 1s;
+				transition: max-height 1s;
 			}
 	
-			div.menu ul li{
+			div.menu>ul li{
 				display: block;
 				text-align: center;
 			}
 	
-				div.menu ul li:not(:last-child){
+				div.menu>ul li:not(:last-child){
 					border-bottom: 1px solid #fff;
 				}
 				
-				div.menu ul li>div.menu-center{
+				div.menu>ul li>div.menu-center{
 					display: inline;
 				}
 	
-				div.menu ul li>div a{
+				div.menu>ul li>div a{
 					line-height: 60px;
 				}
 		
+		div.menu>ul li.com-submenu{
+			background-color: transparent;
+			
+			transition: background-color 1s;
+		}
+	
+			div.menu>ul li.com-submenu a{
 
-		
+			}
+	
+			div.menu>ul li.com-submenu ul{
+				width: calc(100% - 20px);
+				position: relative;
+				display: block;
+				max-height: 0px;
+				
+			}
+	
+				div.menu>ul li.com-submenu ul.expandido{
+					max-height: 300px;
+				}
+	
+				div.menu>ul li.com-submenu ul li{
+					border-bottom: none;
+					line-height: 60px;
+					padding: 0px;
+				}
+	
+					div.menu>ul li.com-submenu.expandido{
+						background-color: #444;
+						transition: background-color 1s;
+					}
+	
+						div.menu>ul li.com-submenu.expandido a{
+							background-color:transparent;
+						}
 }
 
 div.container{

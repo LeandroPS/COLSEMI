@@ -9,7 +9,7 @@ $(function(){
 		}    
 	});
 	
-	$("div.menu").click(function(){
+	$("div.menu span.button-menu").click(function(){
 		if($(window).width() < 800 && $(window).scrollTop() < 530){
 			/*$('html, body').animate({
 					scrollTop: 530
@@ -21,5 +21,10 @@ $(function(){
 			$("div.menu > ul").toggleClass("show");
 		}
 		
+	});
+	
+	$("div.menu ul li.com-submenu").click(function(){
+		$(this).toggleClass("expandido");
+		$(this).children("ul").toggleClass("expandido");
 	});
 });
