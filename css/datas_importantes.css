@@ -23,6 +23,10 @@ div.datas-importantes{
 				display: inline-block;
 			}
 
+				div.datas-importantes ul li div.datas span.a{
+					line-height: 70px;
+				}
+
 				div.datas-importantes ul li div.datas div.data{
 					width: 50px;
 				}

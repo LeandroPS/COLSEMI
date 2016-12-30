@@ -1,5 +1,9 @@
 $(function(){
 	var elementPosition = $('div.menu').offset();
+	
+	$(window).resize(function(){
+		elementPosition = $('div.menu').offset();
+	});
 
 	$(window).scroll(function(){
 		if($(window).scrollTop() > elementPosition.top){
