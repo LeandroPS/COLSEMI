@@ -335,15 +335,18 @@ div.menu{
 					background-color: transparent;
 					
 					transition: background-color 1s;
+					cursor: pointer;
 				}
 
-				div.menu>ul li.com-submenu.expandido a{
+				div.menu>ul li.com-submenu.expandido div a{
 					background-color: #222;
 					
 					transition: background-color 0.5s;
+					
+					
 				}
 
-				div.menu>ul li.com-submenu a:after{
+				div.menu>ul li.com-submenu> div> a:after{
 					content: "";
 					width: 0px;
 					height: 0px;
@@ -358,7 +361,7 @@ div.menu{
 					
 				}
 
-					div.menu>ul li.com-submenu.expandido a:after{
+					div.menu>ul li.com-submenu.expandido> div> a:after{
 						content: "";
 						width: 0px;
 						height: 0px;
@@ -443,7 +446,7 @@ div.menu{
 		}
 	
 			div.menu>ul.show{
-				max-height: 535px;
+				max-height: 600px;
 				
 				transition: max-height 1s;
 			}
@@ -463,6 +466,7 @@ div.menu{
 	
 				div.menu>ul li>div a{
 					line-height: 60px;
+					cursor: pointer;
 				}
 		
 		div.menu>ul li.com-submenu{
