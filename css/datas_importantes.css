@@ -52,4 +52,7 @@ div.datas-importantes{
 
 			div.datas-importantes ul li div.enunciado{
 				display: inline-block;
+				/* float: right; */
+				max-width: calc(100% - 155px);
+				margin-left: 10px;
 			}
