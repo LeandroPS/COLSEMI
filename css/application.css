@@ -572,6 +572,12 @@ div.container{
 		margin: 0px;
 	}
 
+	div.block.em-construcao h2{
+		padding: 50px 0px;
+		text-align: center;
+		color: #c0c0c0;
+	}
+
 	div.block.half.datas-importantes{
 		
 	}
