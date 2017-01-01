@@ -2,17 +2,27 @@
 <html>
 	<head>
 		<title>COLSEMI - 6º Colóquio Internacional de Semiótica</title>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 		<link rel="stylesheet" type="text/css" href="css/myriad.css">
 		<link rel="stylesheet" type="text/css" href="css/application.css">
 		<link rel="stylesheet" type="text/css" href="css/datas_importantes.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/formularios.css">
 
-		<script type="text/javascript"></script>
-		
-		
+		<script type="text/javascript" src="javascript/estado_cidade.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				new dgCidadesEstados(document.getElementById('estado'), document.getElementById('cidade'), true);
+			}
+
+		</script>
+		<style type="text/css">
+
+			p{
+				margin: 15px;
+			}
+
+		</style>
 	</head>
 	<body>
 		<header>
@@ -119,45 +129,98 @@
 
 			</div>
 		</header>
-		
 		<div class="container">
-			<div class="block">
-				<h2>Sobre o envio de textos para publicação</h2>
+			<div class="block half">
+				<h2>Inscrição para ouvinte</h2>
 				<p>
-Prezado(a), leia atentamente as seguintes observações:
-				<br/>
-					<br/>
-1- Não aceitaremos textos que estejam fora das normas de publicação;
-<br/>
-2- Antes de enviar o seu texto, faça uma revisão gramatical;
-<br/>
-3- O seu texto será avaliado por pareceristas da área, visto que ele fará parte de um E-book. Nesse caso, capriche na parte teórica do texto, assim como na análise (caso haja), para que ele seja aprovado;
-<br/>
-4- Mande o seu arquivo segundo o formato pedido nas normas de formatação, com o seguinte título: 
- Texto_Colsemi_2017_ nomeeultimosobrenome.
-Exemplo: Texto_Colsemi_2017_GiselleArruda
-<br/>
-5- O “assunto” do seu e-mail deverá ser assim:
-Texto para Colsemi2017-Nome completo.
-Exemplo: Texto para Colsemi2017- Giselle de Souza Arruda
-<br/>
-6- Ao final, mande o arquivo com o seu texto para <a href="mailto:textocompletosextocolsemiuerj@gmail.com">textocompletosextocolsemiuerj@gmail.com</a>
-</p>
-				<p>
-Atenciosamente,
-					<br/>
-A organização 
-					</p>
-				
-			</div>		
+					<span class="negrito">O evento acontecerá nos dias 10,13 e 14/11/2017, no Instituto de Letras da UERJ- 11º andar- Campus Maracanã- Rio de Janeiro.</span>
+				</p>
+				<form method="post" action="ouvinte.php">
+						<div class="form">
+							<input type="text" name="nome" id="nome" placeholder="Nome Completo">
+						</div>
+
+						<div class="form">
+							<input type="text" name="endereco" id="end" placeholder="Endereço">
+						</div>
+						
+						<div class="form">
+							<input type="text" name="bairro" id="bairro" placeholder="Bairro">
+						</div>
+						
+						<div class="form">
+							<input type="text" name="cep" id="cep" class="cep" placeholder="CEP">	
+						</div>
+
+						<div class="form">
+							<label for="estado">Estado: </label><select id="estado" name="estado"></select>
+							<label for="cidade">Cidade: </label><select id="cidade" name="cidade"></select>
+						</div>
+
+						<div class="form">
+							<label for="sexo">Sexo: </label>
+							<input type="radio" name="sexo" id="masc" value="Masculino">
+							<label for="masc">Masculino</label>
+							<input type="radio" name="sexo" id="fem" value="Feminino">
+							<label for="fem">Feminino</label>		
+						</div>
+
+						<div class="form">
+							<input type="email" name="email" id="email" placeholder="Email">	
+						</div>
+
+						<p>
+							A participação nos minicursos implica pagamento de taxa extra, conforme tabela de inscrição, e oferta de vagas (30 vagas).
+						</p>
+
+						<div class="form">
+							<p>Deseja se inscrever em algum minicurso?</p>
+							<input type="radio" name="confirm_minicurso" id="sim" value="sim"><label for="sim">Sim</label>
+							<input type="radio" name="confirm_minicurso" id="nao" value="nao"><label for="nao">Não</label>	
+						</div>
+						
+						<div class="form">
+							<label for="minicurso">Título do minicurso: </label>
+							<!-- Select do minicurso -->
+						</div>
+
+						<div class="form">
+							<input type="Submit" name="Enviar" value="Enviar">
+						</div>	
+				</form>
+			</div>
+			<div class="block half right">
+				<h2>Passo a passo da inscrição para ouvintes</h2>
+
+		<ol>
+			<li>Preencha a ficha de inscrição para ouvinte e pague a sua inscrição conforme o valor da data de inscrição, abaixo:</li>
+			<ol style="list-style-type: none;">
+				<li>de 10/1/2017 a 20/04/2017: R$ 40,00;</li>
+				<li>de 21/04/2017 a 31/07/17: R$50,00;</li>
+				<li>de 01/08/2017 a 10/11/2017: R$60,00.</li>
+			</ol>
+			<p>
+				<strong>DEPÓSITO EM CONTA POUPANÇA:</strong><br>
+				Banco Bradesco (CÓDIGO 237)<br>
+				<strong>Agência:</strong> 6124<br>
+				<strong>Conta poupança:</strong> 1000047-5<br>
+				<strong>Nome:</strong> Darcilia M. P. Simões (CPF: 906.279.117- 49)<br>
+			</p>
+			<li>Depois, envie a ficha preenchida e o comprovante de pagamento escaneado para o seguinte e-mail: ouvintessextocolsemiuerj@gmail.com</li>
+			<li>Em 72 horas, você receberá um e-mail que irá comprovar a sua inscrição no 6o COLSEMI.</li>
+		</ol>
+		<p>
+			Atenciosamente,<br>
+			A organização do 6o COLSEMI.
+		</p>
+			</div>
 		</div>
-		
+
 		<footer>
 			<div class="container">
 				<div class="contato">
 					<h2>Contatos</h2>
 					<p>
-						
 						Submissão de resumos: <a href="mailto: resumos.colsemi@gmail.com">resumos.colsemi@gmail.com</a>
 						<br/>
 						Remessa do texto integral: <a href="mailto: resumos.colsemi@gmail.com">texto.completo.colsemi@gmail.com</a>
@@ -181,6 +244,7 @@ A organização
 				<img src="images/creditos.png" >
 			</div>
 		</footer>
+
 		<script src="javascript/jquery.js"></script>
 		<script src="javascript/script.js"></script>
 	</body>

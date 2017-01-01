@@ -548,6 +548,8 @@ div.container{
 		box-sizing: border-box;
 		
 		margin: 20px 0px;
+		
+		overflow: hidden;
 	}
 
 @media (min-width: 800px){

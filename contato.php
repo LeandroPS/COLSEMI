@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>COLSEMI - 6º Colóquio Internacional de Semiótica</title>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 		<link rel="stylesheet" type="text/css" href="css/myriad.css">
 		<link rel="stylesheet" type="text/css" href="css/application.css">
 		<link rel="stylesheet" type="text/css" href="css/datas_importantes.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 
 		<script type="text/javascript"></script>
-		
-		
 	</head>
 	<body>
 		<header>
@@ -48,23 +44,17 @@
 					</div>
 				</div>
 			</div>
-						<div class="menu">
-				<span class="button-menu">MENU</span>
+			<div class="menu">
 				<ul>
 					<li>
 						<div class="menu-center">
-							<a href="index.html">Inicial</a>
+							<a href="#">Inicial</a>
 						</div>
 					</li>
-					<li class="com-submenu">
+					<li>
 						<div class="menu-center">
-							<a >Circulares</a>
+							<a href="circular1.html">Circulares</a>
 						</div>
-						<ul class="submenu">
-							<li>
-								<a href="circular_1.html">1ª Circular</a>
-							</li>
-						</ul>
 					</li>
 					<li>
 						<div class="menu-center">
@@ -73,85 +63,64 @@
 					</li>
 					<li>
 						<div class="menu-center">
-							<a href="resumo_simposios.html">Resumos de Simpósios</a>
+							<a href="#">Resumos de Simpósios</a>
 						</div>
 					</li>
-					<li class="com-submenu">
+					<li>
 						<div class="menu-center">
-							<a>Inscrição</a>
+							<a href="#">Normas</a>
 						</div>
-						
-						<ul class="submenu">
-							<li>
-								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
-							</li>
-							<li>
-								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-poster</a>
-							</li>
-						</ul>
-
-					</li>
-					<li class="com-submenu">
-						<div class="menu-center">
-							<a>Normas de publicação</a>
-						</div>
-						
-						<ul class="submenu">
-							<li>
-								<a href="normas_envio_publicacao.html">Normas de formatação de textos</a>
-							</li>
-							<li>
-								<a href="normas_formatacao.html">Sobre o envio de textos para publicação</a>
-							</li>
-						</ul>
 					</li>
 					<li>
 						<div class="menu-center">
 							<a href="#">Contato</a>
 						</div>
 					</li>
-					<!--
 					<li>
 						<button>Inscreva-se</button>
 					</li>
-					-->
 				</ul>
 
 			</div>
 		</header>
-		
-		<div class="container">
+		<div class="container">			
 			<div class="block">
-				<h2>Sobre o envio de textos para publicação</h2>
-				<p>
-Prezado(a), leia atentamente as seguintes observações:
-				<br/>
-					<br/>
-1- Não aceitaremos textos que estejam fora das normas de publicação;
-<br/>
-2- Antes de enviar o seu texto, faça uma revisão gramatical;
-<br/>
-3- O seu texto será avaliado por pareceristas da área, visto que ele fará parte de um E-book. Nesse caso, capriche na parte teórica do texto, assim como na análise (caso haja), para que ele seja aprovado;
-<br/>
-4- Mande o seu arquivo segundo o formato pedido nas normas de formatação, com o seguinte título: 
- Texto_Colsemi_2017_ nomeeultimosobrenome.
-Exemplo: Texto_Colsemi_2017_GiselleArruda
-<br/>
-5- O “assunto” do seu e-mail deverá ser assim:
-Texto para Colsemi2017-Nome completo.
-Exemplo: Texto para Colsemi2017- Giselle de Souza Arruda
-<br/>
-6- Ao final, mande o arquivo com o seu texto para <a href="mailto:textocompletosextocolsemiuerj@gmail.com">textocompletosextocolsemiuerj@gmail.com</a>
-</p>
-				<p>
-Atenciosamente,
-					<br/>
-A organização 
-					</p>
-				
-			</div>		
+			<?php
+				include "PHPMailer/PHPMailerAutoload.php";
+				$nome = $_POST['nome'];
+				$email = $_POST['email'];
+				$assunto = $_POST['assunto'];
+				$mensagem = $_POST['mensagem'];
+
+				$corpo = "Nome: ". $nome . "<br>Email: " . $email . "<br>Assunto: " . $assunto . "<br>Mensagem: " . $mensagem;
+				$user = new PHPMailer();
+				$user->isSMTP();
+				$user->Host = "smtp.gmail.com";
+				$user->Port = 587;
+				$user->SMTPSecure = 'tls';
+				$user->SMTPAuth = true;
+				$user->Username = "ouvintessextocolsemiuerj@gmail.com";
+				$user->Password = "umbertoeco";
+				$user->setFrom($email, $nome);
+				$user->FromName = $nome;
+				$user->addAddress("higor.italva@gmail.com");
+				$user->Subject = $assunto;
+				$user->msgHTML($corpo);
+				$enviado = $user->send();
+
+				$user->ClearAllRecipients();
+				$user->ClearAttachments();
+				if ($enviado) {
+  					echo "E-mail enviado com sucesso!";
+				} 
+				else {
+  					echo "Não foi possível enviar o e-mail.";
+				}
+			?>
+			
+			</div>
 		</div>
-		
+
 		<footer>
 			<div class="container">
 				<div class="contato">
