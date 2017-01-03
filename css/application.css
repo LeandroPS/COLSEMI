@@ -84,6 +84,14 @@ span.negrito{
 	font-weight: bold;
 }
 
+a{
+	color: #000;
+}
+	
+	a:visited{
+		color: #000;
+	}
+
 div.direita{
 	text-align: right;
 }
@@ -506,7 +514,7 @@ div.menu{
 			}
 	
 			div.menu>ul li.com-submenu ul{
-				width: calc(100% - 20px);
+				width: calc(100% - 30px);
 				position: relative;
 				display: block;
 				max-height: 0px;
@@ -520,7 +528,7 @@ div.menu{
 				div.menu>ul li.com-submenu ul li{
 					border-bottom: none;
 					line-height: 60px;
-					padding: 0px;
+					padding: 20px 0px;
 				}
 	
 					div.menu>ul li.com-submenu.expandido{
@@ -529,7 +537,7 @@ div.menu{
 					}
 	
 						div.menu>ul li.com-submenu.expandido a{
-							background-color:transparent;
+							background-color:transparent !important;
 						}
 }
 

@@ -6,6 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="css/application.css">
 		<link rel="stylesheet" type="text/css" href="css/datas_importantes.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/formularios.css">
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="text/javascript"></script>
 	</head>
@@ -43,17 +46,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="menu">
+						<div class="menu">
+				<span class="button-menu">MENU</span>
 				<ul>
 					<li>
 						<div class="menu-center">
-							<a href="#">Inicial</a>
+							<a href="index.html">Inicial</a>
 						</div>
 					</li>
-					<li>
+					<li class="com-submenu">
 						<div class="menu-center">
-							<a href="circular1.html">Circulares</a>
+							<a >Circulares</a>
 						</div>
+						<ul class="submenu">
+							<li>
+								<a href="circular_1.html">1ª Circular</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<div class="menu-center">
@@ -62,22 +71,48 @@
 					</li>
 					<li>
 						<div class="menu-center">
-							<a href="#">Resumos de Simpósios</a>
+							<a href="resumo_simposios.html">Resumos de Simpósios</a>
 						</div>
 					</li>
-					<li>
+					<li class="com-submenu">
 						<div class="menu-center">
-							<a href="#">Normas</a>
+							<a>Inscrição</a>
 						</div>
+						
+						<ul class="submenu">
+							<li>
+								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
+							</li>
+							<li>
+								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-poster</a>
+							</li>
+						</ul>
+
+					</li>
+					<li class="com-submenu">
+						<div class="menu-center">
+							<a>Normas de publicação</a>
+						</div>
+						
+						<ul class="submenu">
+							<li>
+								<a href="normas_envio_publicacao.html">Normas de formatação de textos</a>
+							</li>
+							<li>
+								<a href="normas_formatacao.html">Sobre o envio de textos para publicação</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<div class="menu-center">
 							<a href="contato.html">Contato</a>
 						</div>
 					</li>
+					<!--
 					<li>
 						<button>Inscreva-se</button>
 					</li>
+					-->
 				</ul>
 
 			</div>
@@ -85,39 +120,59 @@
 
 		<!-- fim do formulário de contato-->
 		<div class="container">
-			<div class="block programacao">
-
+			<div class="block half left">
+				<h2>Contato</h2>
 				<form method="post" action="contato.php">
-					<fieldset>
-						<legend>Contato</legend>
-
+				
 						<div>
-							<label for="nome">Nome:</label><br>
-							<input type="text" name="nome" id="nome">
+<!--							<label for="nome">Nome:</label><br>-->
+							<input type="text" name="nome" id="nome" placeholder="Nome">
 						</div>
 
 						<div>
-							<label for="email">Email:</label><br>
-							<input type="text" name="email" id="email">
+<!--							<label for="email">Email:</label><br>-->
+							<input type="text" name="email" id="email" placeholder="Email">
 						</div>
 
 						<div>
-							<label for="assunto">Assunto:</label><br>
-							<input type="text" name="assunto" id="assunto">					
+<!--							<label for="assunto">Assunto:</label><br>-->
+							<input type="text" name="assunto" id="assunto" placeholder="Assunto">					
 						</div>
 
 						<div>
-							<label for="texto">Mensagem:</label><br>
-							<textarea maxlength="1000" name="mensagem" id="texto" rows="10" cols="110">
+<!--							<label for="texto">Mensagem:</label><br>-->
+							<textarea maxlength="1000" name="mensagem" id="texto" rows="10" cols="110" placeholder="Mensagem">
 							</textarea>
 						</div>
 
 						<div>
 							<input type="Submit" name="Enviar" value="Enviar">
 						</div>
-
-					</fieldset>
 				</form>
+			</div>
+			<div class="block half right">
+			
+			<h2>Contatos</h2>
+					<p>
+						
+						Submissão de resumos: 
+						<br/><a href="mailto: resumos.colsemi@gmail.com">resumos.colsemi@gmail.com</a>
+						<br/>
+						Remessa do texto integral: 
+						<br/><a href="mailto: resumos.colsemi@gmail.com">texto.completo.colsemi@gmail.com</a>
+						<br/>
+						Inscrição de ouvintes: 
+						<br/><a href="mailto: resumos.colsemi@gmail.com">inscricao.colsemi@gmail.com</a>
+						<br/>
+						Contato organização: 
+						<br/><a href="mailto: resumos.colsemi@gmail.com">admin.colsemi@gmail.com</a>
+						<br/>
+						Contato monitoria: 
+						<br/><a href="mailto: resumos.colsemi@gmail.com">monitoria.colsemi@globo.com</a>
+						<br/>
+						Sobre pagamento de taxa: 
+						<br/><a href="mailto: resumos.colsemi@gmail.com">paga.inscricao.colsemi@globo.com</a>
+					</p>
 			</div>
 		</div>
 
