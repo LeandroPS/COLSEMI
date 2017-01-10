@@ -132,17 +132,11 @@
 							<a href="contato.html">Contato</a>
 						</div>
 					</li>
-					<!--
-					<li>
-						<button>Inscreva-se</button>
-					</li>
-					-->
 				</ul>
 
 			</div>
 		</header>
 
-		<!-- fim do formulário de contato-->
 		<div class="container">
 			<div class="block half left">
 				<h2>Inscrição para comunição e pôster</h2>
@@ -153,79 +147,84 @@
 				<form method="post" action="comunicacao_poster.php">
 						<div class="form">
 							<label for="modalidade">Modalidade de sua apresentação:</label><br>	
-							<input type="radio" name="modalidade" id="comunicacao" value="COMUNICAÇÃO EM SIMPÓSIO">
+							<input type="radio" name="modalidade" id="comunicacao" required="true" value="COMUNICAÇÃO EM SIMPÓSIO">
 							<label for="comunicacao">COMUNICAÇÃO EM SIMPÓSIO</label>
-							<input type="radio" name="modalidade" id="poster" value="Pôster">
+							<input type="radio" name="modalidade" id="poster" required="true" value="Pôster">
 							<label for="poster">PÔSTER</label>
 						</div>
 
 						<div class="form">
-							<input type="text" name="titulo" id="titulo" placeholder="TÍTULO DA COMUNICAÇÃO/ PÔSTER">
+							<input type="text" name="titulo" id="titulo" title="Por favor, preencha este campo." placeholder="TÍTULO DA COMUNICAÇÃO/ PÔSTER" required="true">
 						</div>
 <div class="form">
-							<input type="text" name="nome" id="nome" placeholder="Nome Completo">
+							<input type="text" name="nome" id="nome" title="Por favor, preencha este campo." placeholder="Nome Completo" required="true">
 						</div>
 
 						<div class="form">
-							<input type="text" name="endereco" id="end" placeholder="Endereço">
+							<input type="text" name="endereco" id="end" title="Por favor, preencha este campo." placeholder="Endereço" required="true">
 						</div>
 						
 						<div class="form">
-							<input type="text" name="bairro" id="bairro" placeholder="Bairro">
+							<input type="text" name="bairro" id="bairro" title="Por favor, preencha este campo." placeholder="Bairro" required="true">
 						</div>
 						
 						<div class="form">
-							<input type="text" name="cep" id="cep" class="cep" placeholder="CEP">	
+							<input type="text" name="cep" id="cep" class="cep" title="Por favor, preencha este campo." placeholder="CEP - Ex: 11222000" maxlength="8" required="true">	
 						</div>
 
 						<div class="form">
-							<label for="estado">Estado: </label><select id="estado" name="estado"></select>
-							<label for="cidade">Cidade: </label><select id="cidade" name="cidade"></select>
+							<label for="estado">Estado: </label><select id="estado" name="estado" required="true"></select>
+							<label for="cidade">Cidade: </label><select id="cidade" name="cidade" required="true"></select>
 						</div>
 
 						<div class="form">
 							<label for="sexo">Sexo: </label>
-							<input type="radio" name="sexo" id="masc" value="Masculino">
+							<input type="radio" name="sexo" id="masc" value="Masculino" required="true">
 							<label for="masc">Masculino</label>
-							<input type="radio" name="sexo" id="fem" value="Feminino">
+							<input type="radio" name="sexo" id="fem" value="Feminino" required="true">
 							<label for="fem">Feminino</label>		
 						</div>
 
 						<div class="form">
-							<input type="email" name="email" id="email" placeholder="Email">	
+							<input type="email" name="email" id="email" title="Por favor, preencha este campo." placeholder="Email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">	
 						</div>
 
 						<div class="form">
-							<input type="text" name="formacao" id="formacao" placeholder="Nível de formação atual">
+							<input type="text" name="formacao" id="formacao" title="Por favor, preencha este campo." placeholder="Nível de formação atual" required="true">
 						</div>
 
 						<div class="form">
-							<input type="text" name="vinculo" id="vinculo" placeholder="Instituição com a qual possui atualmente vínculo de trabalho, estudo ou pesquisa">
+							<input type="text" name="vinculo" id="vinculo" title="Por favor, preencha este campo." required="true" placeholder="Instituição com a qual possui atualmente vínculo de trabalho, estudo ou pesquisa">
 						</div>
 
 						<div class="form">
 							<label>Você irá se inscrever em algum minicurso?</label><br>
-							<input type="radio" name="minicurso" id="sim" value="Sim" onclick="minicurso()"><label for="sim">Sim</label>
-							<input type="radio" name="minicurso" id="nao" value="Não" onclick="minicurso()"><label for="nao">Não</label>
+							<input type="radio" name="minicurso" required id="sim" value="Sim" onclick="minicurso()"><label for="sim">Sim</label>
+							<input type="radio" name="minicurso" required id="nao" value="Não" onclick="minicurso()"><label for="nao">Não</label>
 						</div>
 						<p id="mini">
 							Aqui entrará os minicursos
 						</p>
 
 						<div class="form">
-							<input type="text" name="autor" id="autor" placeholder="Autor">
+							<input type="text" name="autor" id="autor" title="Por favor, preencha este campo." required placeholder="Autor">
 						</div>
 
 						<div class="form">
-							<input type="text" name="coautor" id="autor" placeholder="Coautor">
+							<input type="text" name="coautor" id="autor" title="Por favor, preencha este campo." required placeholder="Coautor">
 						</div>
 						
 						<div class="form">
-							<textarea name="resumo" id="resumo" minlength="500" maxlength="1000" cols="100" rows="12" placeholder="Resumo"></textarea>	
+							<textarea name="resumo" id="resumo" minlength="500" title="Seu resumo tem que ter entre 500 e 1000 caracteres." required maxlength="1000" cols="100" rows="12" placeholder="Resumo"></textarea>	
 						</div>
 
 						<div class="form">
-							<input type="text" name="chave" id="chave" placeholder="Palavras chave">
+							<label>Cinco Palvaras chave:</label><br><br>
+							<input type="text" name="chave1" id="chave1" required="" title="Por favor, preencha este campo." placeholder="Palavra 1">
+							<input type="text" name="chave2" id="chave2" required="" title="Por favor, preencha este campo." placeholder="Palavra 2">
+							<input type="text" name="chave3" id="chave3" required="" title="Por favor, preencha este campo." placeholder="Palavra 3">
+							<input type="text" name="chave4" id="chave4" required="" title="Por favor, preencha este campo." placeholder="Palavra 4">
+							<input type="text" name="chave5" id="chave5" required="" title="Por favor, preencha este campo." placeholder="Palavra 5">
 						</div>
 
 					<p>
