@@ -116,30 +116,25 @@
 			</div>
 		</header>
 
-		<!-- fim do formulário de contato-->
 		<div class="container">
 			<div class="block half left">
 				<h2>Contato</h2>
 				<form method="post" action="contato.php">
 				
 						<div>
-<!--							<label for="nome">Nome:</label><br>-->
-							<input type="text" name="nome" id="nome" placeholder="Nome">
+							<input type="text" name="nome" id="nome" title="Preencha o campo Nome" maxlength="50" required="true" placeholder="Nome">
 						</div>
 
 						<div>
-<!--							<label for="email">Email:</label><br>-->
-							<input type="text" name="email" id="email" placeholder="Email">
+							<input type="text" name="email" id="email" placeholder="Email" title="Preencha o campo Email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 						</div>
 
 						<div>
-<!--							<label for="assunto">Assunto:</label><br>-->
-							<input type="text" name="assunto" id="assunto" placeholder="Assunto">					
+							<input type="text" name="assunto" id="assunto" title="Preencha o campo Assunto" required="true" placeholder="Assunto">					
 						</div>
 
 						<div>
-<!--							<label for="texto">Mensagem:</label><br>-->
-							<textarea maxlength="1000" name="mensagem" id="texto" rows="10" cols="110" placeholder="Mensagem">
+							<textarea maxlength="1000" name="mensagem" id="texto" rows="10" cols="110" required="true" placeholder="Mensagem">
 							</textarea>
 						</div>
 
