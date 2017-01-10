@@ -140,36 +140,36 @@
 				</p>
 				<form method="post" action="ouvinte.php">
 						<div class="form">
-							<input type="text" name="nome" id="nome" placeholder="Nome Completo">
+							<input type="text" name="nome" required="true" id="nome" placeholder="Nome Completo">
 						</div>
 
 						<div class="form">
-							<input type="text" name="endereco" id="end" placeholder="Endereço">
+							<input type="text" name="endereco" required="true" id="end" placeholder="Endereço">
 						</div>
 						
 						<div class="form">
-							<input type="text" name="bairro" id="bairro" placeholder="Bairro">
+							<input type="text" name="bairro" id="bairro" required="true" placeholder="Bairro">
 						</div>
 						
 						<div class="form">
-							<input type="text" name="cep" id="cep" class="cep" placeholder="CEP">	
+							<input type="text" name="cep" id="cep" class="cep" required="true" maxlength="8" placeholder="CEP - Ex: 11222000">	
 						</div>
 
 						<div class="form">
-							<label for="estado">Estado: </label><select id="estado" name="estado"></select>
-							<label for="cidade">Cidade: </label><select id="cidade" name="cidade"></select>
+							<label for="estado">Estado: </label><select id="estado" name="estado" required></select>
+							<label for="cidade">Cidade: </label><select id="cidade" name="cidade" required></select>
 						</div>
 
 						<div class="form">
 							<label for="sexo">Sexo: </label>
-							<input type="radio" name="sexo" id="masc" value="Masculino">
+							<input type="radio" name="sexo" id="masc" value="Masculino" required>
 							<label for="masc">Masculino</label>
-							<input type="radio" name="sexo" id="fem" value="Feminino">
+							<input type="radio" name="sexo" id="fem" value="Feminino" required>
 							<label for="fem">Feminino</label>		
 						</div>
 
 						<div class="form">
-							<input type="email" name="email" id="email" placeholder="Email">	
+							<input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">	
 						</div>
 
 						<p>
@@ -178,8 +178,8 @@
 
 						<div class="form">
 							<p>Deseja se inscrever em algum minicurso?</p>
-							<input type="radio" name="confirm_minicurso" id="sim" value="sim"><label for="sim">Sim</label>
-							<input type="radio" name="confirm_minicurso" id="nao" value="nao"><label for="nao">Não</label>	
+							<input type="radio" name="confirm_minicurso" required id="sim" value="sim"><label for="sim">Sim</label>
+							<input type="radio" name="confirm_minicurso" required id="nao" value="nao"><label for="nao">Não</label>	
 						</div>
 						
 						<div class="form">
