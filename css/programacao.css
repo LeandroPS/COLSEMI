@@ -1,10 +1,13 @@
-div.dia:not(:last-child){
+div.programacao div.dia:not(:last-child){
 	margin-bottom: 30px;
 }
 
-div.data{
+div.programacao div.data{
+/*
 	float: left;
 	margin-right: 10px;
+*/
+	margin-bottom: 10px;
 }
 
 table.programacao{
@@ -21,6 +24,10 @@ table.programacao{
 
 	table.programacao tr{
 		height: 60px;
+		
+/*		display: flex;*/
+    align-items: stretch;
+		justify-content: space-around;
 	}
 
 		table.programacao tr:nth-child(odd){
@@ -39,3 +46,24 @@ table.programacao{
 				
 				padding: 0px 20px;
 			}
+
+
+			table.programacao.prog tr td:nth-child(1){
+				width: 100px;
+			}
+
+			table.programacao.prog tr td:nth-child(2){
+/*				width: 200px;*/
+				flex: 1;
+				display:inline-block;
+			}
+
+			table.programacao.prog tr td:nth-child(3){
+				width: 200px;
+			}
+
+			table.programacao.prog tr td:nth-child(4){
+				width: 200px;
+				
+			}
+

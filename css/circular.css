@@ -3,20 +3,21 @@
 	background-size: contain;*/
 }
 
-table{
+div.circular table{
 	text-align: center;
 	border-collapse: collapse;
 }
 
-table tr{
+div.circular table tr{
 	height: 60px;
 	width: 600px;
 }
-table tr td{
+
+div.circular table tr td{
 	border: 1px solid black;
 }
 
-table tr td img{
+div.circular table tr td img{
 	max-width: 50%;
 }
 

@@ -7,12 +7,31 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/myriad.css">
 		<link rel="stylesheet" type="text/css" href="css/application.css">
-		<link rel="stylesheet" type="text/css" href="css/resumo.css">
+		<link rel="stylesheet" type="text/css" href="css/datas_importantes.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/circular.css">
+		<link rel="stylesheet" type="text/css" href="css/formularios.css">
+		<link rel="stylesheet" type="text/css" href="css/programacao.css">
+		<link rel="stylesheet" type="text/css" href="css/resumo.css">
+		
+		<script type="text/javascript" src="javascript/estado_cidade.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				new dgCidadesEstados(document.getElementById('estado'), document.getElementById('cidade'), true);
+			}
+		</script>
 
-		<script type="text/javascript"></script>
-		
-		
+		<script type="text/javascript">
+			function minicurso(){
+				var escolha = document.getElementsByName('minicurso');
+				if( escolha == "sim"){
+					alert("Sim");
+				}
+				else{
+					alert("Nada");
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -48,7 +67,7 @@
 					</div>
 				</div>
 			</div>
-						<div class="menu">
+			<div class="menu">
 				<span class="button-menu">MENU</span>
 				<ul>
 					<li>
@@ -73,7 +92,12 @@
 					</li>
 					<li>
 						<div class="menu-center">
-							<a href="resumo_simposios.html">Resumos de Simpósios</a>
+							<a href="resumo_simposios.html">Simpósios</a>
+						</div>
+					</li>
+					<li>
+						<div class="menu-center">
+							<a href="minicursos.html">Minicursos</a>
 						</div>
 					</li>
 					<li class="com-submenu">
@@ -96,7 +120,7 @@
 					</li>
 					<li class="com-submenu">
 						<div class="menu-center">
-							<a>Normas de publicação</a>
+							<a>Normas</a>
 						</div>
 						
 						<ul class="submenu">
@@ -113,11 +137,6 @@
 							<a href="contato.html">Contato</a>
 						</div>
 					</li>
-					<!--
-					<li>
-						<button>Inscreva-se</button>
-					</li>
-					-->
 				</ul>
 
 			</div>
