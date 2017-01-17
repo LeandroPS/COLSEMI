@@ -37,7 +37,6 @@
 		<header>
 			<div class="header">
 				<div class="backgrounds" style="background-image: url('images/header.png')"></div>
-
 				<div class="container">
 					<div class="narrow-header">
 
@@ -139,10 +138,55 @@
 		</header>
 		<div class="container">			
 			<div class="block">
-				<h2>Obrigado!</h2>
+				<h2>
+					Obrigado	
+				</h2>
 			<?php
+
+				function check_in_range($start_date, $end_date, $date_from_user)
+				{
+					// Convert to timestamp
+					$start_ts = strtotime($start_date);
+					$end_ts = strtotime($end_date);
+					$user_ts = strtotime($date_from_user);
+
+					// Check that user date is between start & end
+					return (($user_ts >= $start_ts) && ($user_ts <= $end_ts));
+				}
+
+				function DataVencimento(){
+					$now = date("y-m-d");
+					
+					if(check_in_range('2017-01-10', '2017-06-15', $now)){
+						return "15/06";
+					}else if(check_in_range('2017-06-16', '2017-07-31', $now)){
+						return "31/07";
+					}else if(check_in_range('2017-08-01', '2017-11-10', $now)){
+						return "10/11";
+					}else{
+						return "erro";
+					}
+				}
+
+				$preco["minicurso"]["15/06"] = 50;
+				$preco["minicurso"]["31/07"] = 70;
+				$preco["minicurso"]["10/11"] = 80;
+
+				$preco["ouvinte"]["15/06"] = 40;
+				$preco["ouvinte"]["31/07"] = 50;
+				$preco["ouvinte"]["10/11"] = 60;
+
+				$botao["ouvinte"]["nao"]["15/06"] = "3JUBRCFFKRGEG";
+				$botao["ouvinte"]["nao"]["31/07"] = "AKKL2FL36XFAG";
+				$botao["ouvinte"]["nao"]["10/11"] = "6SPBCR8YZMT8J";
+				
+				$botao["ouvinte"]["sim"]["15/06"] = "BWEJEKSDGAUBS";
+				$botao["ouvinte"]["sim"]["31/07"] = "REUXKQGDNERHQ";
+				$botao["ouvinte"]["sim"]["10/11"] = "AGGGZFMBQDT4S";
+				
+				$botao["teste"] = "X7X8LHW4BPMQS";
+
 				include "PHPMailer/PHPMailerAutoload.php";
-				$modalidade = $_POST['modalidade'];
 				$nome = $_POST['nome'];
 				$endereco = $_POST['endereco'];
 				$bairro = $_POST['bairro'];
@@ -151,35 +195,21 @@
 				$cidade = $_POST['cidade'];
 				$sexo = $_POST['sexo'];
 				$email = $_POST['email'];
-				$formacao = $_POST['formacao'];
-				$instituicao = $_POST['vinculo'];
-				$minicurso = "";
-				$autor = $_POST['autor'];
-				$coautor = $_POST['coautor'];
-				$resumo = $_POST['resumo'];
-				$chave1 = $_POST['chave1'];
-				$chave2 = $_POST['chave2'];
-				$chave3 = $_POST['chave3'];
-				$chave4 = $_POST['chave4'];
-				$chave5 = $_POST['chave5'];
+				$confirm_minicurso = $_POST['confirm_minicurso'];
+				$minicurso = $_POST['minicursos'];
 
-				$corpo = "<b>Nome: </b>". $nome 
-					."<br><b>Endreço: </b>". $endereco 
-					."<br><b>Bairro: </b>". $bairro 
-					."<br><b>CEP: </b>". $cep 
-					."<br><b>Estado: </b>". $estado 
-					."<br><b>Cidade: </b>". $cidade 
-					."<br><b>Sexo: </b>" . $sexo 
-					."<br><b>Email: </b>" . $email 
-					."<br><b>Formação: </b>" . $formacao 
-					."<br><br>Informações sobre resumo: <br><br>"
-					."<b>Modalidade: </b>" . $modalidade 
-					."<br><b>Instituição Vinculada: </b>" . $instituicao 
-					."<br><b>Autor: </b>". $autor 
-					."<br><b>Coautor: </b>" . $coautor 
-					."<br><b>Resumo: </b>" . $resumo 
-					."<br><b>Chaves: </b>" . $chave1 . ", " . $chave2 . ", " . $chave3 . ", " . $chave4 . ", " . $chave5 . "<br>";
-		
+				$corpo = 
+					"Nome: ".$nome
+					."<br/><b>Endereço:</b> ".$endereco
+					."<br/><b>Bairro:</b> ".$bairro
+					."<br/><b>CEP:</b> ".$cep
+					."<br/><b>Estado:</b> ".$estado
+					."<br/><b>Cidade:</b> ".$cidade
+					."<br/><b>Sexo:</b> ".$sexo
+					."<br/><b>E-mail:</b> ".$email
+					."<br/><b>Com Minicurso:</b> ".$confirm_minicurso
+					."<br/><b>Minicurso:</b> ".$minicurso;
+
 				$user = new PHPMailer();
 				$send = new PHPMailer();
 				
@@ -213,38 +243,69 @@
 				$user->FromName = $nome;
 				$send->FromName = "Colsemi";
 
-				$user->addAddress("comunicapostersextocolsemiuerj@gmail.com");
+				$user->addAddress("ouvintessextocolsemiuerj@gmail.com");
 				$user->addAddress("leandro.pires.souza@gmail.com");
 				$send->addAddress($email);
 
-				$user->Subject = "Nova inscrição na modalidade: ".$modalidade;
+				$user->Subject = "Nova inscrição ouvinte - ".$nome;
 				$send->Subject = "Inscricao Colsemi";
 
 				$user->msgHTML($corpo);
-				$send->msgHTML("<p>
-					ATENÇÃO: ESTE AINDA NÃO É O E-MAIL DE ACEITAÇÃO DA SUA INSCRIÇÃO
-				</p>
-				<p>Obrigado por se inscrever no 6º Colsemi. Você receberá em até 72 horas outro e-mail com a sua carta de aceitação, efetue o seu pagamento somente após receber esta carta.</p>");
+				$send->msgHTML("
+				<h1>Sua inscrição foi recebida</h1>
+				<p>Obrigado por se inscrever no 6º Colsemi. Sua inscrição foi recebida com sucesso, se você ainda não pagou realize seu pagamento.</p>");
 
 				$enviado = $user->send();
 				$send->send();
 
 				$user->ClearAllRecipients();
 				$user->ClearAttachments();
-				
+
 				if ($enviado) {
-					echo "<p>Você se inscreveu na modalidade ". $modalidade ."</p>";
-					echo "<p>Você receberá em até 72 horas um e-mail com a sua carta de aceite, realize o pagamento de sua inscrição somente após o recebimento deste e-mail.</p>";
-					echo "<p>Qualquer erro de confirmação ou dúvida, entre em contato conosco.</p>";
+					?>
+  				<p>
+						Sua inscrição foi recebida com sucesso, para realizar o pagamento é possível fazer um depósito bancário ou utilizar seu cartão de crédito através do PayPal.
+					</p>
+					<p>
+						Caso opte pelo depósito bancário utilize os dados abaixo e em seguida envie um e-mail com o comprovante de pagamento escaneado para o seguinte e-mail: <a href="mailto:ouvintessextocolsemiuerj@gmail.com">ouvintessextocolsemiuerj@gmail.com</a>
+					</p>
+					<p>
+						<strong>DADOS PARA DEPÓSITO:</strong><br>
+						Banco Bradesco (CÓDIGO 237)<br>
+						<strong>Agência:</strong> 6124<br>
+						<strong>Conta poupança:</strong> 1000047-5<br>
+						<strong>Nome:</strong> Darcilia M. P. Simões (CPF: 906.279.117- 49)<br>
+					</p>
+				<p>
+					Em 72 horas, você receberá um e-mail que irá comprovar a sua inscrição no 6o COLSEMI.
+				</p>
+				<p>
+					Ou, para utilizar seu cartão de Crédito use o botão abaixo:
+				</p>
+				<p>
+
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="<?php echo $botao["ouvinte"][$confirm_minicurso][DataVencimento()]; ?>">
+						<input type="hidden" name="on0" value="Nome">
+						<input type="hidden" name="os0" maxlength="200" value="<?php echo $nome; ?>">
+						<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			
+				</p>
+				<?php
 				} 
 				else {
-  					echo "Não foi possível realizar seu cadastro agora, tente novamente mais tarde.";
+					?>
+  				<p>
+						Houve um erro ao processar a sua inscrição por favor, tente novamente mais tarde!
+					</p>
+			<?php
 				}
-					
 			?>
 			</div>
 		</div>
-
 		<footer>
 			<div class="container">
 				<div class="contato">
@@ -276,5 +337,6 @@
 		</footer>
 		<script src="javascript/jquery.js"></script>
 		<script src="javascript/script.js"></script>
+	
 	</body>
 </html>

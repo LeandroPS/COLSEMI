@@ -5,7 +5,8 @@
 	
 		footer div.contato{
 			width: 100%;
-			display: block;
+/*			display: block;*/
+			display: none;
 			text-align: center;
 		}
 	
@@ -37,7 +38,8 @@ footer{
 	}
 
 	footer div.contato{
-		display: inline-block;
+/*		display: inline-block;*/
+		display: none;
 	}
 
 		footer div.contato a{
@@ -45,8 +47,15 @@ footer{
 		}
 
 	footer div.realizacao{
-		float: right;
+/*		float: right;*/
 		text-align: center;
+		
+		float: none;
+		text-align: center;
+		width: 100%;
+		display: block;
+		
+		margin-bottom: 20px;
 	}
 
 		footer div.realizacao img{

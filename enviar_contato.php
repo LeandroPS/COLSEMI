@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>COLSEMI - 6º Colóquio Internacional de Semiótica</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<link rel="stylesheet" type="text/css" href="css/myriad.css">
 		<link rel="stylesheet" type="text/css" href="css/application.css">
 		<link rel="stylesheet" type="text/css" href="css/datas_importantes.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/circular.css">
+		<link rel="stylesheet" type="text/css" href="css/formularios.css">
+		<link rel="stylesheet" type="text/css" href="css/programacao.css">
+		<link rel="stylesheet" type="text/css" href="css/resumo.css">
+		
+		<script type="text/javascript" src="javascript/estado_cidade.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				new dgCidadesEstados(document.getElementById('estado'), document.getElementById('cidade'), true);
+			}
+		</script>
 
-		<script type="text/javascript"></script>
+		<script type="text/javascript">
+			function minicurso(){
+				var escolha = document.getElementsByName('minicurso');
+				if( escolha == "sim"){
+					alert("Sim");
+				}
+				else{
+					alert("Nada");
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<header>
 			<div class="header">
 				<div class="backgrounds" style="background-image: url('images/header.png')"></div>
-				<!--<h1>6° Colóquio 
-					Internacional de 
-					Semiótica</h1>-->
-				<!-- <%= image_tag "LOGO.png" %>
-			-->
 				<div class="container">
 					<div class="narrow-header">
 
@@ -45,16 +63,22 @@
 				</div>
 			</div>
 			<div class="menu">
+				<span class="button-menu">MENU</span>
 				<ul>
 					<li>
 						<div class="menu-center">
-							<a href="#">Inicial</a>
+							<a href="index.html">Inicial</a>
 						</div>
 					</li>
-					<li>
+					<li class="com-submenu">
 						<div class="menu-center">
-							<a href="circular1.html">Circulares</a>
+							<a >Circulares</a>
 						</div>
+						<ul class="submenu">
+							<li>
+								<a href="circular_1.html">1ª Circular</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<div class="menu-center">
@@ -63,28 +87,58 @@
 					</li>
 					<li>
 						<div class="menu-center">
-							<a href="#">Resumos de Simpósios</a>
+							<a href="resumo_simposios.html">Simpósios</a>
 						</div>
 					</li>
 					<li>
 						<div class="menu-center">
-							<a href="#">Normas</a>
+							<a href="minicursos.html">Minicursos</a>
 						</div>
+					</li>
+					<li class="com-submenu">
+						<div class="menu-center">
+							<a>Inscrição</a>
+						</div>
+						
+						<ul class="submenu">
+							<li>
+								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
+							</li>
+							<li>
+								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-poster</a>
+							</li>
+							<li>
+								<a href="valores.html">Valores de inscrição</a>
+							</li>
+						</ul>
+
+					</li>
+					<li class="com-submenu">
+						<div class="menu-center">
+							<a>Normas</a>
+						</div>
+						
+						<ul class="submenu">
+							<li>
+								<a href="normas_formatacao.html">Normas de formatação de textos</a>
+							</li>
+							<li>
+								<a href="normas_envio_publicacao.html">Sobre o envio de textos para publicação</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<div class="menu-center">
-							<a href="#">Contato</a>
+							<a href="contato.html">Contato</a>
 						</div>
-					</li>
-					<li>
-						<button>Inscreva-se</button>
 					</li>
 				</ul>
 
 			</div>
 		</header>
 		<div class="container">			
-			<div class="block">
+			<div class="block em-construcao">
+				<h2>
 			<?php
 				include "PHPMailer/PHPMailerAutoload.php";
 				$nome = $_POST['nome'];
@@ -104,19 +158,21 @@
 				$user->setFrom($email, $nome);
 				$user->FromName = $nome;
 				$user->addAddress("higor.italva@gmail.com");
-				$user->Subject = $assunto;
+				$user->addAddress("leandro.pires.souza@gmail.com");
+				$user->Subject = "Nova mensagem para COLSEMI: ".$assunto;
 				$user->msgHTML($corpo);
 				$enviado = $user->send();
 
 				$user->ClearAllRecipients();
 				$user->ClearAttachments();
 				if ($enviado) {
-  					echo "E-mail enviado com sucesso!";
+  					echo "Nós recebemos o seu contato!";
 				} 
 				else {
-  					echo "Não foi possível enviar o e-mail.";
+  					echo "Não foi possível receber o seu contato, tente novamente mais tarde!";
 				}
 			?>
+					</h2>
 			
 			</div>
 		</div>

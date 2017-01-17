@@ -113,7 +113,26 @@ div.normas table{
     min-width: 200px;
     padding: 10px;
 	}
+
+table.comissao{
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+	table.comissao tr{
+		
+	}
 	
+		table.comissao tr td, table.comissao tr th{
+			border: 1px solid black;
+			padding: 5px 10px;
+		}
+	
+/********/
+div.pagamento:not(.inicial){
+	display: none;
+}
+/********/
 
 div.header{
 	height: 400px;

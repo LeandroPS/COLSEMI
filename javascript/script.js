@@ -31,4 +31,16 @@ $(function(){
 		$(this).toggleClass("expandido");
 		$(this).children("ul").toggleClass("expandido");
 	});
+	
+	$("form.pagamento-ouvinte").submit(function(){
+	 	
+		console.log("foi");
+		
+		var option = $("select.com_minicurso").val();
+	
+		$("div.block div.pagamento.inicial").hide();
+		$("div.block div.pagamento."+option).show();
+		
+		return false;
+	});
 });

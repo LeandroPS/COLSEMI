@@ -37,7 +37,6 @@
 		<header>
 			<div class="header">
 				<div class="backgrounds" style="background-image: url('images/header.png')"></div>
-
 				<div class="container">
 					<div class="narrow-header">
 
@@ -137,62 +136,44 @@
 
 			</div>
 		</header>
-
-		<div class="container">
-			<div class="block half left">
-				<h2>Contato</h2>
-				<form method="post" action="enviar_contato.php">
-				
-						<div>
-							<input type="text" name="nome" id="nome" title="Preencha o campo Nome" maxlength="50" required="true" placeholder="Nome">
+		<div class="container">			
+			<div class="block">
+				<h2>
+					Pagamento posterior	
+				</h2>
+				<p>
+					Use esta página para realizar o pagamento posteriormente a sua inscrição preenchendo os dados abaixo:
+				</p>
+				<p>
+					<form method="post" action="pagamento-posterior2.php">
+						<p>
+						Preencha o nome completo presente na inscrição:
+						</p>
+						<input type="text" class="nome" name="nome" placeholder="Nome completo" required>
+						<p>
+						Selecione a modalidade da inscrição:
+						<div class="select-wrapper">
+							<select name="modalidade" required>
+								<option value="prof-doc-coord">Professores – doutores (coordenador de simpósio)</option>
+								<option value="prof-doc-com">Professores - doutores e professores-mestres (comunicação oral em simpósio)</option>
+								<option value="alu-pos-com">Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)</option>
+								<option value="alu-pos-post">Alunos de pós-graduação lato e stricto sensu (pôster)</option>
+								<option value="alu-grad-post">Alunos de graduação e graduados(pôster)</option>
+								
+								<option value="teste">Teste</option>
+							</select>
 						</div>
-
-						<div>
-							<input type="text" name="email" id="email" placeholder="Email" title="Preencha o campo Email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-						</div>
-
-						<div>
-							<input type="text" name="assunto" id="assunto" title="Preencha o campo Assunto" required="true" placeholder="Assunto">					
-						</div>
-
-						<div>
-							<textarea maxlength="1000" name="mensagem" id="texto" rows="10" cols="110" required="true" placeholder="Mensagem">
-							</textarea>
-						</div>
-
-						<div>
-							<input type="Submit" name="Enviar" value="Enviar">
-						</div>
-				</form>
-			</div>
-			<div class="block half right">
-			
-			<h2>Contatos</h2>
-					<p>
-
-						Submissão de resumos: 
-						<br/><a href="mailto: resumos@colsemi2017.com.br">resumos@colsemi2017.com.br</a>
-						<br/>
-						Remessa do texto integral: 
-						<br/><a href="mailto: texto.completo@colsemi2017.com.br">texto.completo@colsemi2017.com.br</a>
-						<br/>
-						Inscrição de ouvintes: 
-						<br/><a href="mailto: inscricao@colsemi2017.com.br">inscricao@colsemi2017.com.br</a>
-						<br/>
-						Contato organização: 
-						<br/><a href="mailto: contato@colsemi2017.com.br">contato@colsemi2017.com.br</a>
-						<br/>
-						Contato monitoria: 
-						<br/><a href="mailto: contato.monitoria@colsemi2017.com.br">contato.monitoria@colsemi2017.com.br</a>
-						<br/>
-						Sobre pagamento de taxa: 
-						<br/><a href="mailto: pagamento@colsemi2017.com.br">pagamento@colsemi2017.com.br</a>
-					</p>
+						</p>
+						<p>Você se inscreveu em algum minicurso?</p>
+							<input type="radio" name="confirm_minicurso" required id="sim" value="sim"><label for="sim">Sim</label>
+							<input type="radio" name="confirm_minicurso" required id="nao" value="nao"><label for="nao">Não</label>	
+						<p>
+							<input type="Submit" name="Enviar" value="Pagar">
+						</p>
+					</form>
+				</p>
 			</div>
 		</div>
-
-					<!-- fim do formulário de contato-->
-
 		<footer>
 			<div class="container">
 				<div class="contato">
@@ -224,5 +205,6 @@
 		</footer>
 		<script src="javascript/jquery.js"></script>
 		<script src="javascript/script.js"></script>
+	
 	</body>
 </html>
