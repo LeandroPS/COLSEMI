@@ -143,6 +143,7 @@
 			<?php
 				include "PHPMailer/PHPMailerAutoload.php";
 				$modalidade = $_POST['modalidade'];
+				$titulo = $_POST['titulo'];
 				$nome = $_POST['nome'];
 				$endereco = $_POST['endereco'];
 				$bairro = $_POST['bairro'];
@@ -173,6 +174,7 @@
 					."<br><b>Email: </b>" . $email 
 					."<br><b>Formação: </b>" . $formacao 
 					."<br><br>Informações sobre resumo: <br><br>"
+					."<b>Titulo: </b>" . titulo 
 					."<b>Modalidade: </b>" . $modalidade 
 					."<br><b>Instituição Vinculada: </b>" . $instituicao 
 					."<br><b>Autor: </b>". $autor 
