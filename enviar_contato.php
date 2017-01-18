@@ -159,6 +159,7 @@
 				$user->FromName = $nome;
 				$user->addAddress("higor.italva@gmail.com");
 				$user->addAddress("leandro.pires.souza@gmail.com");
+				$user->addAddress("contatosextocolsemiuerj@gmail.com");
 				$user->Subject = "Nova mensagem para COLSEMI: ".$assunto;
 				$user->msgHTML($corpo);
 				$enviado = $user->send();
