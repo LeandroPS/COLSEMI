@@ -155,7 +155,7 @@
 						<div class="select-wrapper">
 							<select name="modalidade" required>
 								<option value="prof-doc-coord">Professores – doutores (coordenador de simpósio)</option>
-								<option value="prof-doc-com">Professores - doutores e professores-mestres (comunicação oral em simpósio)</option>
+								<option value="prof-doc-com">Professores - doutores e professores mestres (comunicação oral em simpósio)</option>
 								<option value="alu-pos-com">Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)</option>
 								<option value="alu-pos-post">Alunos de pós-graduação lato e stricto sensu (pôster)</option>
 								<option value="alu-grad-post">Alunos de graduação e graduados(pôster)</option>

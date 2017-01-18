@@ -169,7 +169,7 @@
 					}
 
 					$titulo["prof-doc-coord"] = "Professores – doutores (coordenador de simpósio)";
-					$titulo["prof-doc-com"] = "Professores- doutores e professores-mestres (comunicação oral em simpósio)";
+					$titulo["prof-doc-com"] = "Professores - doutores e professores mestres (comunicação oral em simpósio)";
 					$titulo["alu-pos-com"] = "Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)";
 					$titulo["alu-pos-post"] = "Alunos de pós-graduação lato e stricto sensu (pôster)";
 					$titulo["alu-grad-post"] = "Alunos de graduação e graduados(pôster)";
