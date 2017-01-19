@@ -179,8 +179,8 @@
 						."<br><b>Formação: </b>" . $formacao 
 						."<br><b>Com minicurso: </b>" . $confirma_minicurso
 						."<br><br>Informações sobre resumo: <br><br>"
-						."<b>Titulo: </b>" . titulo 
-						."<b>Modalidade: </b>" . $modalidade 
+						."<br><b>Titulo: </b>" . titulo 
+						."<br><b>Modalidade: </b>" . $modalidade 
 						."<br><b>Instituição Vinculada: </b>" . $instituicao 
 						."<br><b>Autor: </b>". $autor 
 						."<br><b>Coautor: </b>" . $coautor 
@@ -199,8 +199,8 @@
 						."<br><b>Com minicurso: </b>" . $confirma_minicurso
 						."<br><b>Minicurso: </b>" . $minicurso
 						."<br><br>Informações sobre resumo: <br><br>"
-						."<b>Titulo: </b>" . titulo 
-						."<b>Modalidade: </b>" . $modalidade 
+						."<br><b>Titulo: </b>" . titulo 
+						."<br><b>Modalidade: </b>" . $modalidade 
 						."<br><b>Instituição Vinculada: </b>" . $instituicao 
 						."<br><b>Autor: </b>". $autor 
 						."<br><b>Coautor: </b>" . $coautor 
