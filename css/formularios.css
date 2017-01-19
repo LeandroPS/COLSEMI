@@ -109,3 +109,17 @@ form{
 				/* margin-top: 20px; */ 
 				margin-left: 7px;
 		}
+
+
+div.form.minicurso{
+	overflow: hidden;
+	max-height: 0px;
+	
+	transition: height 1s;
+}
+
+	div.form.minicurso.show{
+		max-height: 200px;
+		
+		transition: height 1s;
+	}

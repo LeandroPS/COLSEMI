@@ -43,4 +43,15 @@ $(function(){
 		
 		return false;
 	});
+	
+	$("input.minicurso-sim").click(function(){
+		$("div.form.minicurso").addClass("show");
+		$("div.form.minicurso select").prop("required", true);
+		
+	});
+	
+	$("input.minicurso-nao").click(function(){
+		$("div.form.minicurso").removeClass("show");
+		$("div.form.minicurso select").prop("required", false);
+	});
 });

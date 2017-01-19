@@ -154,7 +154,10 @@
 				$email = $_POST['email'];
 				$formacao = $_POST['formacao'];
 				$instituicao = $_POST['vinculo'];
-				$minicurso = "";
+
+				$confirma_minicurso = $_POST['confirm_minicurso'];
+				$minicurso = $_POST['minicursos'];
+
 				$autor = $_POST['autor'];
 				$coautor = $_POST['coautor'];
 				$resumo = $_POST['resumo'];
@@ -163,24 +166,47 @@
 				$chave3 = $_POST['chave3'];
 				$chave4 = $_POST['chave4'];
 				$chave5 = $_POST['chave5'];
-
-				$corpo = "<b>Nome: </b>". $nome 
-					."<br><b>Endreço: </b>". $endereco 
-					."<br><b>Bairro: </b>". $bairro 
-					."<br><b>CEP: </b>". $cep 
-					."<br><b>Estado: </b>". $estado 
-					."<br><b>Cidade: </b>". $cidade 
-					."<br><b>Sexo: </b>" . $sexo 
-					."<br><b>Email: </b>" . $email 
-					."<br><b>Formação: </b>" . $formacao 
-					."<br><br>Informações sobre resumo: <br><br>"
-					."<b>Titulo: </b>" . titulo 
-					."<b>Modalidade: </b>" . $modalidade 
-					."<br><b>Instituição Vinculada: </b>" . $instituicao 
-					."<br><b>Autor: </b>". $autor 
-					."<br><b>Coautor: </b>" . $coautor 
-					."<br><b>Resumo: </b>" . $resumo 
-					."<br><b>Chaves: </b>" . $chave1 . ", " . $chave2 . ", " . $chave3 . ", " . $chave4 . ", " . $chave5 . "<br>";
+				
+				if($confirma_minicurso == "nao"){
+					$corpo = "<b>Nome: </b>". $nome 
+						."<br><b>Endreço: </b>". $endereco 
+						."<br><b>Bairro: </b>". $bairro 
+						."<br><b>CEP: </b>". $cep 
+						."<br><b>Estado: </b>". $estado 
+						."<br><b>Cidade: </b>". $cidade 
+						."<br><b>Sexo: </b>" . $sexo 
+						."<br><b>Email: </b>" . $email 
+						."<br><b>Formação: </b>" . $formacao 
+						."<br><b>Com minicurso: </b>" . $confirma_minicurso
+						."<br><br>Informações sobre resumo: <br><br>"
+						."<b>Titulo: </b>" . titulo 
+						."<b>Modalidade: </b>" . $modalidade 
+						."<br><b>Instituição Vinculada: </b>" . $instituicao 
+						."<br><b>Autor: </b>". $autor 
+						."<br><b>Coautor: </b>" . $coautor 
+						."<br><b>Resumo: </b>" . $resumo 
+						."<br><b>Chaves: </b>" . $chave1 . ", " . $chave2 . ", " . $chave3 . ", " . $chave4 . ", " . $chave5 . "<br>";
+				}else{
+					$corpo = "<b>Nome: </b>". $nome 
+						."<br><b>Endreço: </b>". $endereco 
+						."<br><b>Bairro: </b>". $bairro 
+						."<br><b>CEP: </b>". $cep 
+						."<br><b>Estado: </b>". $estado 
+						."<br><b>Cidade: </b>". $cidade 
+						."<br><b>Sexo: </b>" . $sexo 
+						."<br><b>Email: </b>" . $email 
+						."<br><b>Formação: </b>" . $formacao 
+						."<br><b>Com minicurso: </b>" . $confirma_minicurso
+						."<br><b>Minicurso: </b>" . $minicurso
+						."<br><br>Informações sobre resumo: <br><br>"
+						."<b>Titulo: </b>" . titulo 
+						."<b>Modalidade: </b>" . $modalidade 
+						."<br><b>Instituição Vinculada: </b>" . $instituicao 
+						."<br><b>Autor: </b>". $autor 
+						."<br><b>Coautor: </b>" . $coautor 
+						."<br><b>Resumo: </b>" . $resumo 
+						."<br><b>Chaves: </b>" . $chave1 . ", " . $chave2 . ", " . $chave3 . ", " . $chave4 . ", " . $chave5 . "<br>";
+				}
 		
 				$user = new PHPMailer();
 				$send = new PHPMailer();

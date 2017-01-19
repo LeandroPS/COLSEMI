@@ -197,18 +197,31 @@
 				$email = $_POST['email'];
 				$confirm_minicurso = $_POST['confirm_minicurso'];
 				$minicurso = $_POST['minicursos'];
-
-				$corpo = 
-					"Nome: ".$nome
-					."<br/><b>Endereço:</b> ".$endereco
-					."<br/><b>Bairro:</b> ".$bairro
-					."<br/><b>CEP:</b> ".$cep
-					."<br/><b>Estado:</b> ".$estado
-					."<br/><b>Cidade:</b> ".$cidade
-					."<br/><b>Sexo:</b> ".$sexo
-					."<br/><b>E-mail:</b> ".$email
-					."<br/><b>Com Minicurso:</b> ".$confirm_minicurso
-					."<br/><b>Minicurso:</b> ".$minicurso;
+				
+				if($confirm_minicurso=="sim"){
+					$corpo = 
+						"Nome: ".$nome
+						."<br/><b>Endereço:</b> ".$endereco
+						."<br/><b>Bairro:</b> ".$bairro
+						."<br/><b>CEP:</b> ".$cep
+						."<br/><b>Estado:</b> ".$estado
+						."<br/><b>Cidade:</b> ".$cidade
+						."<br/><b>Sexo:</b> ".$sexo
+						."<br/><b>E-mail:</b> ".$email
+						."<br/><b>Com Minicurso:</b> ".$confirm_minicurso
+						."<br/><b>Minicurso:</b> ".$minicurso;
+				}else{
+					$corpo = 
+						"Nome: ".$nome
+						."<br/><b>Endereço:</b> ".$endereco
+						."<br/><b>Bairro:</b> ".$bairro
+						."<br/><b>CEP:</b> ".$cep
+						."<br/><b>Estado:</b> ".$estado
+						."<br/><b>Cidade:</b> ".$cidade
+						."<br/><b>Sexo:</b> ".$sexo
+						."<br/><b>E-mail:</b> ".$email
+						."<br/><b>Com Minicurso:</b> ".$confirm_minicurso;
+				}
 
 				$user = new PHPMailer();
 				$send = new PHPMailer();

@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="css/programacao.css">
 		<link rel="stylesheet" type="text/css" href="css/resumo.css">
 		
-                <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
 		<link rel="stylesheet" type="text/css" href="css/myriad.css">
 		<link rel="stylesheet" type="text/css" href="css/application.css">
 		<link rel="stylesheet" type="text/css" href="css/datas_importantes.css">
@@ -228,12 +228,33 @@
 						</div>
 
 						<div class="form">
-							<p>Deseja se inscrever em algum minicurso?</p>
-							<input type="radio" name="confirm_minicurso" required id="sim" value="sim"><label for="sim">Sim</label>
-							<input type="radio" name="confirm_minicurso" required id="nao" value="nao"><label for="nao">Não</label>	
+							<input type="text" name="autor" id="autor" title="Por favor, preencha este campo." required placeholder="Autor">
+						</div>
+
+						<div class="form">
+							<input type="text" name="coautor" id="autor" title="Por favor, preencha este campo." required placeholder="Coautor">
 						</div>
 						
 						<div class="form">
+							<textarea name="resumo" id="resumo" minlength="500" title="Seu resumo tem que ter entre 500 e 1000 caracteres." required maxlength="1000" cols="100" rows="12" placeholder="Resumo"></textarea>	
+						</div>
+
+						<div class="form">
+							<label>Cinco Palvaras chave:</label><br><br>
+							<input type="text" name="chave1" id="chave1" required="" title="Por favor, preencha este campo." placeholder="Palavra 1">
+							<input type="text" name="chave2" id="chave2" required="" title="Por favor, preencha este campo." placeholder="Palavra 2">
+							<input type="text" name="chave3" id="chave3" required="" title="Por favor, preencha este campo." placeholder="Palavra 3">
+							<input type="text" name="chave4" id="chave4" required="" title="Por favor, preencha este campo." placeholder="Palavra 4">
+							<input type="text" name="chave5" id="chave5" required="" title="Por favor, preencha este campo." placeholder="Palavra 5">
+						</div>
+					
+						<div class="form">
+							<p>Deseja se inscrever em algum minicurso?</p>
+							<input type="radio" name="confirm_minicurso" required id="sim" value="sim" class="minicurso-sim"><label for="sim">Sim</label>
+							<input type="radio" name="confirm_minicurso" required id="nao" value="nao" class="minicurso-nao"><label for="nao">Não</label>	
+						</div>
+						
+						<div class="form minicurso">
 							<label for="minicurso">Título do minicurso: </label>
 							<div class="select-wrapper">
 								<select name="minicursos" id="minicursos" required="">
@@ -256,27 +277,6 @@
 								</select>
 							</div>
 							
-						</div>
-
-						<div class="form">
-							<input type="text" name="autor" id="autor" title="Por favor, preencha este campo." required placeholder="Autor">
-						</div>
-
-						<div class="form">
-							<input type="text" name="coautor" id="autor" title="Por favor, preencha este campo." required placeholder="Coautor">
-						</div>
-						
-						<div class="form">
-							<textarea name="resumo" id="resumo" minlength="500" title="Seu resumo tem que ter entre 500 e 1000 caracteres." required maxlength="1000" cols="100" rows="12" placeholder="Resumo"></textarea>	
-						</div>
-
-						<div class="form">
-							<label>Cinco Palvaras chave:</label><br><br>
-							<input type="text" name="chave1" id="chave1" required="" title="Por favor, preencha este campo." placeholder="Palavra 1">
-							<input type="text" name="chave2" id="chave2" required="" title="Por favor, preencha este campo." placeholder="Palavra 2">
-							<input type="text" name="chave3" id="chave3" required="" title="Por favor, preencha este campo." placeholder="Palavra 3">
-							<input type="text" name="chave4" id="chave4" required="" title="Por favor, preencha este campo." placeholder="Palavra 4">
-							<input type="text" name="chave5" id="chave5" required="" title="Por favor, preencha este campo." placeholder="Palavra 5">
 						</div>
 
 					<p>
