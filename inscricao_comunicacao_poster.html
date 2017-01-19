@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>COLSEMI - 6º Colóquio Internacional de Semiótica</title>
+		<title>COLSEMI 2017 - 6º Colóquio Internacional de Semiótica na UERJ</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		

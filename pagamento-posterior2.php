@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>COLSEMI - 6º Colóquio Internacional de Semiótica</title>
+		<title>COLSEMI 2017 - 6º Colóquio Internacional de Semiótica na UERJ</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
@@ -169,7 +169,7 @@
 					}
 
 					$titulo["prof-doc-coord"] = "Professores – doutores (coordenador de simpósio)";
-					$titulo["prof-doc-com"] = "Professores - doutores e professores mestres (comunicação oral em simpósio)";
+					$titulo["prof-doc-com"] = "Professores - doutores e professores-mestres (comunicação oral em simpósio)";
 					$titulo["alu-pos-com"] = "Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)";
 					$titulo["alu-pos-post"] = "Alunos de pós-graduação lato e stricto sensu (pôster)";
 					$titulo["alu-grad-post"] = "Alunos de graduação e graduados(pôster)";

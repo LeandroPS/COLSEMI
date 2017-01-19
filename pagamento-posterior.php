@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>COLSEMI - 6º Colóquio Internacional de Semiótica</title>
+		<title>COLSEMI 2017 - 6º Colóquio Internacional de Semiótica na UERJ</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
@@ -155,7 +155,7 @@
 						<div class="select-wrapper">
 							<select name="modalidade" required>
 								<option value="prof-doc-coord">Professores – doutores (coordenador de simpósio)</option>
-								<option value="prof-doc-com">Professores - doutores e professores mestres (comunicação oral em simpósio)</option>
+								<option value="prof-doc-com">Professores - doutores e professores-mestres (comunicação oral em simpósio)</option>
 								<option value="alu-pos-com">Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)</option>
 								<option value="alu-pos-post">Alunos de pós-graduação lato e stricto sensu (pôster)</option>
 								<option value="alu-grad-post">Alunos de graduação e graduados(pôster)</option>
