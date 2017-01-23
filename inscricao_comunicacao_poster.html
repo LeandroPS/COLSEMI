@@ -171,7 +171,7 @@
 				<form method="post" action="poster_ouvinte1.php">
 						<div class="form">
 							<label for="modalidade">Modalidade de sua apresentação:</label><br>	
-							<input type="radio" name="modalidade" id="comunicacao" required="true" value="COMUNICAÇÃO EM SIMPÓSIO">
+							<input type="radio" name="modalidade" id="comunicacao" required="true" value="Comunicação em simpósio">
 							<label for="comunicacao">COMUNICAÇÃO EM SIMPÓSIO</label>
 							<input type="radio" name="modalidade" id="poster" required="true" value="Pôster">
 							<label for="poster">PÔSTER</label>
@@ -248,6 +248,31 @@
 							<input type="text" name="chave5" id="chave5" required="" title="Por favor, preencha este campo." placeholder="Palavra 5">
 						</div>
 					
+						<div class="form simposio">
+							<label for="simposios">Escolha um simpósio para apresentar sua comunicação: </label>
+							<div class="select-wrapper">
+								<select name="simposios" id="simposios">
+									<option value="">Selecione o Simpósio</option>
+									<option value="1. Semiótica Cognitiva: linguagem, comunicação e neurociências">1. Semiótica Cognitiva: linguagem, comunicação e neurociências</option>
+									<option value="2. Linguística sistêmico-funcional – ferramenta para o trabalho com a leitura, a produção de textos e a análise linguística">2. Linguística sistêmico-funcional – ferramenta para o trabalho com a leitura, a produção de textos e a análise linguística</option>
+									<option value="3. A semiótica, as inteligências múltiplas e o ensino da língua">3. A semiótica, as inteligências múltiplas e o ensino da língua</option>
+									<option value="4. Música e literatura: fronteiras e intersecções">4. Música e literatura: fronteiras e intersecções</option>
+									<option value="5. Leitura e produção textual : motivações e estratégias linguísticas e semióticas">5. Leitura e produção textual : motivações e estratégias linguísticas e semióticas</option>
+									<option value="6. Semiótica, psicanálise e masculinidades">6. Semiótica, psicanálise e masculinidades</option>
+									<option value="7. Português Língua Não Materna: descrição, ensino e formação de professores em perspectiva multidisciplinar">7. Português Língua Não Materna: descrição, ensino e formação de professores em perspectiva multidisciplinar</option>
+									<option value="8. Semiótica, análise de gêneros, leitura e produção escrita">8. Semiótica, análise de gêneros, leitura e produção escrita</option>
+									<option value="9. A semiótica de C. S. Peirce e os processos de investigação">9. A semiótica de C. S. Peirce e os processos de investigação</option>
+									<option value="10. Semiótica e Ensino">10. Semiótica e Ensino</option>
+									<option value="11. Semiótica jurídica">11. Semiótica jurídica</option>
+									<option value="12. Textualidade e humor: aspectos linguístico-discursivos">12. Textualidade e humor: aspectos linguístico-discursivos</option>
+									<option value="13. Tradução: aspectos linguísticos e semióticos">13. Tradução: aspectos linguísticos e semióticos</option>
+									<option value="14. Semiótica e análise do discurso">14. Semiótica e análise do discurso</option>
+									<option value="15. Estilística e semiótica: uma interseção profícua">15. Estilística e semiótica: uma interseção profícua</option>
+									
+								</select>
+							</div>
+						</div>
+					
 						<div class="form">
 							<p>Deseja se inscrever em algum minicurso?</p>
 							<input type="radio" name="confirm_minicurso" required id="sim" value="sim" class="minicurso-sim"><label for="sim">Sim</label>
@@ -257,7 +282,7 @@
 						<div class="form minicurso">
 							<label for="minicurso">Título do minicurso: </label>
 							<div class="select-wrapper">
-								<select name="minicursos" id="minicursos" required="">
+								<select name="minicursos" id="minicursos">
 									<option value="">Selecione o minicurso</option>
 									<option value="Alguns aspectos da revisão de textos acadêmicos">1. Alguns aspectos da revisão de textos acadêmicos</option>
 									<option value="Pós-Modernismos nas Histórias em Quadrinhos">2. Pós-Modernismos nas Histórias em Quadrinhos</option>

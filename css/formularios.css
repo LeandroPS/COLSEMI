@@ -111,14 +111,14 @@ form{
 		}
 
 
-div.form.minicurso{
+div.form.minicurso, div.form.simposio{
 	overflow: hidden;
 	max-height: 0px;
 	
 	transition: height 1s;
 }
 
-	div.form.minicurso.show{
+	div.form.minicurso.show, div.form.simposio.show{
 		max-height: 200px;
 		
 		transition: height 1s;

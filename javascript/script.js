@@ -54,4 +54,14 @@ $(function(){
 		$("div.form.minicurso").removeClass("show");
 		$("div.form.minicurso select").prop("required", false);
 	});
+	
+	$("input#comunicacao").click(function(){
+		$("div.form.simposio").addClass("show");
+		$("div.form.simposio select").prop("required", true);
+	});
+	
+	$("input#poster").click(function(){
+		$("div.form.simposio").removeClass("show");
+		$("div.form.simposio select").prop("required", false);
+	});
 });

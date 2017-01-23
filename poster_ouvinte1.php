@@ -157,6 +157,7 @@
 
 				$confirma_minicurso = $_POST['confirm_minicurso'];
 				$minicurso = $_POST['minicursos'];
+				$simposio = $_POST['simposios'];
 
 				$autor = $_POST['autor'];
 				$coautor = $_POST['coautor'];
@@ -167,7 +168,7 @@
 				$chave4 = $_POST['chave4'];
 				$chave5 = $_POST['chave5'];
 				
-				if($confirma_minicurso == "nao"){
+				//if($confirma_minicurso == "nao"){
 					$corpo = "<b>Nome: </b>". $nome 
 						."<br><b>Endreço: </b>". $endereco 
 						."<br><b>Bairro: </b>". $bairro 
@@ -177,15 +178,18 @@
 						."<br><b>Sexo: </b>" . $sexo 
 						."<br><b>Email: </b>" . $email 
 						."<br><b>Formação: </b>" . $formacao 
-						."<br><b>Com minicurso: </b>" . $confirma_minicurso
+						."<br><b>Com minicurso: </b>" . $confirma_minicurso				
+						.($confirma_minicurso == "nao"? "": "<br><b>Minicurso: </b>" . $minicurso)
 						."<br><br>Informações sobre resumo: <br><br>"
 						."<br><b>Titulo: </b>" . $titulo 
 						."<br><b>Modalidade: </b>" . $modalidade 
+						.($modalidade == "Pôster"? "": "<br><b>Simposio: </b>" . $simposio)
 						."<br><b>Instituição Vinculada: </b>" . $instituicao 
 						."<br><b>Autor: </b>". $autor 
 						."<br><b>Coautor: </b>" . $coautor 
 						."<br><b>Resumo: </b>" . $resumo 
 						."<br><b>Chaves: </b>" . $chave1 . ", " . $chave2 . ", " . $chave3 . ", " . $chave4 . ", " . $chave5 . "<br>";
+/*
 				}else{
 					$corpo = "<b>Nome: </b>". $nome 
 						."<br><b>Endreço: </b>". $endereco 
@@ -207,7 +211,7 @@
 						."<br><b>Resumo: </b>" . $resumo 
 						."<br><b>Chaves: </b>" . $chave1 . ", " . $chave2 . ", " . $chave3 . ", " . $chave4 . ", " . $chave5 . "<br>";
 				}
-		
+		*/
 				$user = new PHPMailer();
 				$send = new PHPMailer();
 				
