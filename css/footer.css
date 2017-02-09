@@ -97,3 +97,20 @@ footer{
 				  margin-top: 50px;
 				}
 
+
+footer div.compartilhar{
+	display: block;
+	text-align: center;
+}
+
+	footer div.compartilhar a{
+		
+	}
+
+		footer div.compartilhar a img{
+			width: 30px;
+		}
+
+			footer div.compartilhar a:not(:first-child){
+				margin-left: 10px;
+			}
