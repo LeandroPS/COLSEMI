@@ -256,7 +256,8 @@
 				$send->msgHTML("<p>
 					ATENÇÃO: ESTE AINDA NÃO É O E-MAIL DE ACEITAÇÃO DA SUA INSCRIÇÃO
 				</p>
-				<p>Obrigado por se inscrever no 6º Colsemi. Você receberá em até 72 horas outro e-mail com a sua carta de aceitação, efetue o seu pagamento somente após receber esta carta.</p>");
+				<p>Obrigado por se inscrever no 6º Colsemi.</p>
+				<!--<p>Obrigado por se inscrever no 6º Colsemi. Você receberá em até 72 horas outro e-mail com a sua carta de aceitação, efetue o seu pagamento somente após receber esta carta.</p>-->");
 
 				$enviado = $user->send();
 				$send->send();
