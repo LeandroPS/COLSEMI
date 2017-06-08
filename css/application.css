@@ -578,6 +578,12 @@ div.container{
 		overflow: hidden;
 	}
 
+		div.block h2.manutencao{
+			line-height: 200px;
+			text-align: center;
+			font-size: 30pt;
+		}
+
 @media (min-width: 800px){
 
 	div.block.half{
