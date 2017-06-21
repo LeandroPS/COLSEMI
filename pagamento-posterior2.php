@@ -76,7 +76,22 @@
 						</div>
 						<ul class="submenu">
 							<li>
-								<a href="circular_1.html">1ª Circular</a>
+								<a href="Primeira Circular.pdf" target="_blank">1ª Circular</a>
+							</li>
+							<li>
+								<a href="Segunda_Circular.pdf" target="_blank">2ª Circular</a>
+							</li>
+							<li>
+								<a href="Terceira_Circular.pdf" target="_blank">3ª Circular</a>
+							</li>
+							<li>
+								<a href="Quarta_Circular.pdf" target="_blank">4ª Circular</a>
+							</li>
+							<li>
+								<a href="Cartaz_a4.pdf" target="_blank">Cartaz A4</a>
+							</li>
+							<li>
+								<a href="Cartaz_a3.pdf" target="_blank">Cartaz A3</a>
 							</li>
 						</ul>
 					</li>
@@ -102,10 +117,7 @@
 						
 						<ul class="submenu">
 							<li>
-								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
-							</li>
-							<li>
-								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-pôster</a>
+								<a href="inscricao.html">Inscrição</a>
 							</li>
 							<li>
 								<a href="valores.html">Valores de inscrição</a>
@@ -157,11 +169,11 @@
 					function DataVencimento(){
 						$now = date("y-m-d");
 
-						if(check_in_range('2017-01-10', '2017-06-15', $now)){
+						if(check_in_range('2017-01-10', '2017-08-15', $now)){
 							return "15/06";
-						}else if(check_in_range('2017-06-16', '2017-07-31', $now)){
+						}else if(check_in_range('2017-08-16', '2017-09-31', $now)){
 							return "31/07";
-						}else if(check_in_range('2017-08-01', '2017-11-10', $now)){
+						}else if(check_in_range('2017-10-01', '2017-11-10', $now)){
 							return "10/11";
 						}else{
 							return "erro";
@@ -224,9 +236,6 @@
 						<strong>Conta poupança:</strong> 1000047-5<br>
 						<strong>Nome:</strong> Darcilia M. P. Simões (CPF: 906.279.117- 49)<br>
 					</p>
-				<p>
-					Em 72 horas, você receberá um e-mail que irá comprovar a sua inscrição no 6o COLSEMI.
-				</p>
 				<p>
 					Ou, para utilizar seu cartão de crédito use o botão abaixo:
 				</p>

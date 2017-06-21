@@ -76,7 +76,22 @@
 						</div>
 						<ul class="submenu">
 							<li>
-								<a href="circular_1.html">1ª Circular</a>
+								<a href="Primeira Circular.pdf" target="_blank">1ª Circular</a>
+							</li>
+							<li>
+								<a href="Segunda_Circular.pdf" target="_blank">2ª Circular</a>
+							</li>
+							<li>
+								<a href="Terceira_Circular.pdf" target="_blank">3ª Circular</a>
+							</li>
+							<li>
+								<a href="Quarta_Circular.pdf" target="_blank">4ª Circular</a>
+							</li>
+							<li>
+								<a href="Cartaz_a4.pdf" target="_blank">Cartaz A4</a>
+							</li>
+							<li>
+								<a href="Cartaz_a3.pdf" target="_blank">Cartaz A3</a>
 							</li>
 						</ul>
 					</li>
@@ -102,10 +117,7 @@
 						
 						<ul class="submenu">
 							<li>
-								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
-							</li>
-							<li>
-								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-pôster</a>
+								<a href="inscricao.html">Inscrição</a>
 							</li>
 							<li>
 								<a href="valores.html">Valores de inscrição</a>
@@ -289,9 +301,6 @@
 						<strong>Conta poupança:</strong> 1000047-5<br>
 						<strong>Nome:</strong> Darcilia M. P. Simões (CPF: 906.279.117- 49)<br>
 					</p>
-				<p>
-					Em 72 horas, você receberá um e-mail que irá comprovar a sua inscrição no 6o COLSEMI.
-				</p>
 				<p>
 					Ou, para utilizar seu cartão de Crédito use o botão abaixo:
 				</p>

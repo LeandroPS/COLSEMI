@@ -1,0 +1,11 @@
+a.download-button{
+	display: table;
+	margin: 10px 0px;
+	background: rgba(0,0,0,0.2);
+	padding: 10px 20px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	
+}

@@ -77,7 +77,22 @@
 						</div>
 						<ul class="submenu">
 							<li>
-								<a href="circular_1.html">1ª Circular</a>
+								<a href="Primeira Circular.pdf" target="_blank">1ª Circular</a>
+							</li>
+							<li>
+								<a href="Segunda_Circular.pdf" target="_blank">2ª Circular</a>
+							</li>
+							<li>
+								<a href="Terceira_Circular.pdf" target="_blank">3ª Circular</a>
+							</li>
+							<li>
+								<a href="Quarta_Circular.pdf" target="_blank">4ª Circular</a>
+							</li>
+							<li>
+								<a href="Cartaz_a4.pdf" target="_blank">Cartaz A4</a>
+							</li>
+							<li>
+								<a href="Cartaz_a3.pdf" target="_blank">Cartaz A3</a>
 							</li>
 						</ul>
 					</li>
@@ -103,10 +118,7 @@
 						
 						<ul class="submenu">
 							<li>
-								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
-							</li>
-							<li>
-								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-pôster</a>
+								<a href="inscricao.html">Inscrição</a>
 							</li>
 							<li>
 								<a href="valores.html">Valores de inscrição</a>
@@ -256,8 +268,7 @@
 				$send->msgHTML("<p>
 					ATENÇÃO: ESTE AINDA NÃO É O E-MAIL DE ACEITAÇÃO DA SUA INSCRIÇÃO
 				</p>
-				<p>Obrigado por se inscrever no 6º Colsemi.</p>
-				<!--<p>Obrigado por se inscrever no 6º Colsemi. Você receberá em até 72 horas outro e-mail com a sua carta de aceitação, efetue o seu pagamento somente após receber esta carta.</p>-->");
+				<p>Obrigado por se inscrever no 6º Colsemi.</p>");
 
 				$enviado = $user->send();
 				$send->send();
@@ -267,7 +278,6 @@
 				
 				if ($enviado) {
 					echo "<p>Você se inscreveu na modalidade ". $modalidade ."</p>";
-					echo "<p>Você receberá em até 72 horas um e-mail com a sua carta de aceite, realize o pagamento de sua inscrição somente após o recebimento deste e-mail.</p>";
 					echo "<p>Qualquer erro de confirmação ou dúvida, entre em contato conosco.</p>";
 				} 
 				else {
