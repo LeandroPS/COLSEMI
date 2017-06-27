@@ -181,10 +181,11 @@
 					}
 
 					$titulo["prof-doc-coord"] = "Professores – doutores (coordenador de simpósio)";
-					$titulo["prof-doc-com"] = "Professores - doutores e professores-mestres (comunicação oral em simpósio)";
-					$titulo["alu-pos-com"] = "Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)";
+					$titulo["prof-doc-com"] = "Professores - doutores e professores-mestres (comunicação oral ou pôster)";
+					$titulo["alu-pos-com"] = "Alunos de pós-graduação stricto sensu (comunicação oral ou pôster)";
 					$titulo["alu-pos-post"] = "Alunos de pós-graduação lato e stricto sensu (pôster)";
 					$titulo["alu-grad-post"] = "Alunos de graduação e graduados(pôster)";
+                    $titulo["ouvinte"] = "Ouvinte (Sem apresentação)";
 
 					$preco["minicurso"]["15/06"] = 50;
 					$preco["minicurso"]["31/07"] = 70;
@@ -198,9 +199,9 @@
 					$preco["prof-doc-coord"]["31/07"] = 150;
 					$preco["prof-doc-coord"]["10/11"] = 180;
 
-					$preco["prof-doc-com"]["15/06"] = 100;
-					$preco["prof-doc-com"]["31/07"] = 120;
-					$preco["prof-doc-com"]["10/11"] = 150;
+					$preco["prof-doc-com"]["15/06"] = 130;
+					$preco["prof-doc-com"]["31/07"] = 150;
+					$preco["prof-doc-com"]["10/11"] = 180;
 
 					$preco["alu-pos-com"]["15/06"] = 90;
 					$preco["alu-pos-com"]["31/07"] = 100;

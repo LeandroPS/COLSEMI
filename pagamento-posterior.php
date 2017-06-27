@@ -102,10 +102,7 @@
 						
 						<ul class="submenu">
 							<li>
-								<a href="inscricao_ouvinte.html">Inscrição Ouvinte</a>
-							</li>
-							<li>
-								<a href="inscricao_comunicacao_poster.html">Inscrição Comunicação-pôster</a>
+								<a href="inscricao.html">Inscrição</a>
 							</li>
 							<li>
 								<a href="valores.html">Valores de inscrição</a>
@@ -154,13 +151,22 @@
 						Selecione a modalidade da inscrição:
 						<div class="select-wrapper">
 							<select name="modalidade" required>
-								<option value="prof-doc-coord">Professores – doutores (coordenador de simpósio)</option>
-								<option value="prof-doc-com">Professores - doutores e professores-mestres (comunicação oral em simpósio)</option>
-								<option value="alu-pos-com">Alunos de pós-graduação stricto sensu (comunicação oral em simpósio)</option>
-								<option value="alu-pos-post">Alunos de pós-graduação lato e stricto sensu (pôster)</option>
-								<option value="alu-grad-post">Alunos de graduação e graduados(pôster)</option>
 								
-								<option value="teste">Teste</option>
+								<option value="prof-doc-com">
+                                  Professores - doutores e professores-mestres (comunicação oral ou pôster)
+                                </option>
+								<option value="alu-pos-com">
+                                  Alunos de pós-graduação stricto sensu (comunicação oral ou pôster)
+                                </option>
+								
+								<option value="alu-grad-post">
+                                  Alunos de graduação e graduados(pôster)
+                                </option>
+                                <option value="ouvinte">
+                                  Ouvinte (sem apresentação)
+                                </option>
+								
+<!--								<option value="teste">Teste</option>-->
 							</select>
 						</div>
 						</p>
