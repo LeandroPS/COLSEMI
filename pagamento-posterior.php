@@ -76,7 +76,25 @@
 						</div>
 						<ul class="submenu">
 							<li>
-								<a href="circular_1.html">1ª Circular</a>
+								<a href="Primeira Circular.pdf" target="_blank">1ª Circular</a>
+							</li>
+							<li>
+								<a href="Segunda_Circular.pdf" target="_blank">2ª Circular</a>
+							</li>
+							<li>
+								<a href="Terceira_Circular.pdf" target="_blank">3ª Circular</a>
+							</li>
+							<li>
+								<a href="Quarta_Circular.pdf" target="_blank">4ª Circular</a>
+							</li>
+                            <li>
+								<a href="Quinta_Circular.pdf" target="_blank">5ª Circular</a>
+							</li>
+							<li>
+								<a href="Cartaz_a4.pdf" target="_blank">Cartaz A4</a>
+							</li>
+							<li>
+								<a href="Cartaz_a3.pdf" target="_blank">Cartaz A3</a>
 							</li>
 						</ul>
 					</li>
