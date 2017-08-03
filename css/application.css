@@ -441,7 +441,7 @@ div.menu{
 				}
 
 					div.menu>ul>li.com-submenu>ul.expandido{
-						max-height: 200px;
+						max-height: 300px;
 						
 						transition: max-height 1s;
 					}
